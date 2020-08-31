@@ -54,13 +54,13 @@ public class Q2Meter {
    * match or if they are null or have no elements.
    */
   public static Q2Meter[] makeMeters(String[] names, int[] avgConsumptions) {
-//    if (names.length == 0 || names.length!=avgConsumptions.length) {return null;}
-//    Q2Meter[] res = new Q2Meter[names.length];
-//    for(int i=0; i<names.length;++i){
-//      res[i].Q2Meter()
-//    }
-
-    return null;  // FIXME 2e: complete this method
+    if (names == null || avgConsumptions == null ){return null;}
+    if (names.length == 0 || names.length!=avgConsumptions.length) {return null;}
+    Q2Meter[] res = new Q2Meter[names.length];
+    for(int i=0; i<names.length;++i){
+      res[i] = new Q2Meter(names[i], avgConsumptions[i]);
+    }
+    return res;
   }
 
   /**
