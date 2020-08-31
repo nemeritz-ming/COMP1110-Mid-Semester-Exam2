@@ -28,7 +28,22 @@ public class Q3Shapes {
    * @return true if the string represents a well-formed piece placement.
    */
   public static boolean wellFormedPiecePlacement(String piece) {
-    return false; // FIXME Q3a Complete this method
+    if (piece == null){return false;}
+    if (piece.length() != 4){
+      return false;}
+    if (!((int)piece.charAt(0) == (int)'A'|| (int)piece.charAt(0) == (int)'B'||(int)piece.charAt(0) == (int)'C'||(int)piece.charAt(0) == (int)'D')){
+      return false;
+    }
+    if (!(Character.getNumericValue(piece.charAt(1))>=0 && Character.getNumericValue(piece.charAt(1))<=3)){
+      return false;
+    }
+    if (!(Character.getNumericValue(piece.charAt(2))>=0 && Character.getNumericValue(piece.charAt(2))<=3)){
+      return false;
+    }
+    if(!((int)piece.charAt(3) == (int)'N'|| (int)piece.charAt(3) == (int)'E'||(int)piece.charAt(3) == (int)'W'||(int)piece.charAt(3) == (int)'S')){
+      return false;
+    }
+    return true; // FIXME Q3a Complete this method
   }
 
   /**
@@ -43,6 +58,7 @@ public class Q3Shapes {
    * @return true if the string is a well-formed puzzle string.
    */
   public static boolean wellFormedPuzzleString(String puzzle) {
+
     return false; // FIXME Q3b Complete this method
   }
 

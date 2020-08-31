@@ -11,12 +11,13 @@ public class Q2Meter {
    * @param avgConsumption The average consumption per hour
    */
   public Q2Meter(String id, int avgConsumption) {
-    // FIXME 2a  complete this constructor
+    this.id = id;
+    this.avgConsumption =avgConsumption;
   }
 
   /** Return the average consumption for this meter */
   public int getAvgConsumption() {
-    return 0; // FIXME 2b: complete this method
+    return avgConsumption; // FIXME 2b: complete this method
   }
 
   /**
@@ -24,6 +25,7 @@ public class Q2Meter {
    * @param avgConsumption The average consumption per hour
    */
   public void setAvgConsumption(int avgConsumption) {
+    this.avgConsumption = avgConsumption;
     // FIXME 2c: complete this method
   }
 
@@ -37,7 +39,7 @@ public class Q2Meter {
    * average consumption and a certain number of days.
    */
   public int expectedConsumption(int days) {
-    return 0; // FIXME 2d: complete this method
+    return days*avgConsumption; // FIXME 2d: complete this method
   }
 
   /**
@@ -52,6 +54,12 @@ public class Q2Meter {
    * match or if they are null or have no elements.
    */
   public static Q2Meter[] makeMeters(String[] names, int[] avgConsumptions) {
+//    if (names.length == 0 || names.length!=avgConsumptions.length) {return null;}
+//    Q2Meter[] res = new Q2Meter[names.length];
+//    for(int i=0; i<names.length;++i){
+//      res[i].Q2Meter()
+//    }
+
     return null;  // FIXME 2e: complete this method
   }
 
@@ -65,7 +73,7 @@ public class Q2Meter {
    */
   @Override
   public String toString() {
-    return "";  // FIXME 2f: complete this method
+    return  "Meter "+this.id + " averages "+ this.avgConsumption+ " KWH per day";  // FIXME 2f: complete this method
   }
 
 }

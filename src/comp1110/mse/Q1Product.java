@@ -16,6 +16,17 @@ public class Q1Product {
    * there are no values in the interval.
    */
   public static double product(double[] values, int start, int end) {
-    return -1.0; // FIXME Q1
+    if(values == null){
+      return 0;
+    }
+    if (values.length==0||start>end){
+      return 0;
+    }else{
+      double res = 1;
+      for(int i=start; i< end+1;++i){
+        res = res * values[i];
+      }
+      return res;
+    }
   }
 }
