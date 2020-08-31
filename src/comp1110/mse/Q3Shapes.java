@@ -69,6 +69,12 @@ public class Q3Shapes {
    *  2 upside down
    *  3 rotated 270 degrees clockwise
    *
+   * When a piece is 'upright', the 'top' side will be at the top,
+   * but as the piece is rotated, each of the sides will rotate too,
+   * so when rotated 90 degrees, the 'top' side will point to the
+   * right, and when rotated 180 degrees, the 'top' side will point
+   * down, etc.
+   *
    * @param position a position on a 4x4 board
    * @param side the side of the piece being explored
    * @param orientation the orientation of the piece
