@@ -24,11 +24,11 @@ public class Q2MeterTest {
     }
     private void functionTest(Q2Meter o, int in, int expected) {
         int v = o.expectedConsumption(in);
-        assertEquals("Expected expectedConsumption() for '"+o+"' and input '"+in+"' to return "+expected+" but got "+v, v, expected);
+        assertEquals("Expected expectedConsumption() for meter '"+o+"' and input '"+in+"' to return "+expected+" but got "+v, expected, v);
     }
     private void toStringTest(Q2Meter o, String expected) {
         String out = o.toString();
-        assertEquals("Expected toString() to produce '"+expected+"', but got '"+out+"'", out, expected);
+        assertEquals("Expected toString() to produce '"+expected+"', but got '"+out+"'", expected, out);
     }
     private void factoryTest(String[] v1, int[] v2) {
         Q2Meter[] out = Q2Meter.makeMeters(v1, v2);
